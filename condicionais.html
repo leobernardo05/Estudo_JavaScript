@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estudo em JS</title>
+    <script>
+        var nome = prompt('digite seu nome')
+        var nota = prompt('digite sua nota: ')
+
+        if (nota < 7 && nota > 0) {
+            document.write(nome + ' está de recuperação')
+        } else if (nota >= 7 && nota <= 10 ){
+            document.write(nome + ' parabens, aprovado')
+        } else {
+            document.write('digite uma nota valida')
+        }
+    </script>
 </head>
 <body>
     <h1>Condicionais</h1>
