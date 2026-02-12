@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <script>
+        // ------------------vogal---------------
+        // var letra = prompt('Digite uma letra: ').toLowerCase
+        // //não é ideal, pois têm muitos 'OUS'    
+        // if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+        //     document.write(letra + ' é uma vogal')
+        // } else {
+        //     document.write('Não é  uma vogal')
+        // }
+       
+        //------------------------salario--------------
+        // var salario = prompt('Digite seu salario: ')
+        // if (salario >= 1612 && salario <= 2400) {
+        //     document.write('seu salario atual será: ' + salario*1.2)
+        // } else if (salario < 1612) {
+        //     document.write('seu salario atual será: ' + 1612)
+        // } else if (salario > 2400 && salario <= 7012) {
+        //     document.write('seu salario será: ' + salario*1.10)
+        // } else {
+        //     document.write('Salario não condiz com o que temos na empresa!')
+        // }
+
+        //-------------------media aluno----------------
+        var nome = prompt('Digite seu nome: ')
+        var n1 = prompt('Nota 1: ')
+        var n2 = prompt('n2: ')
+        var media = (parseInt(n1) + parseInt(n2)) /2
+
+        if (media >= 7 && media <= 10) {
+            document.write('Parabéns ' + nome + ' você foi APROVADO!')
+        } else if (media < 7 && media >= 0) {
+            document.write('Infelizmente ' + nome + ' você foi REPROVADO!')
+        } else {
+            document.write('Digite notas validas!')
+        }
+    </script>
+</head>
+<body>
+    <h1>Exercicios condicionais</h1>
+</body>
+</html>
