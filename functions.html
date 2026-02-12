@@ -6,6 +6,7 @@
     <title>Estudo JS</title>
     <script>
         
+        // Função simples
         function calcularArea(largura, altura){
             var area = parseInt(largura) * parseInt(altura)
             return area
@@ -15,6 +16,51 @@
         var h = prompt('Digite a altura: ')
 
         document.write('A área é: ' + calcularArea(l,h))
+
+        
+        // Flexibilidade de parametros
+        function soma(a, b){
+            // b = b === undefined ? 0 : b
+            return a + b
+        }
+        
+        console.log(soma(7,7))
+        console.log(soma(7,7,9,10)) //demais parametros são desconsiderados
+        console.log(soma(7))
+        console.log(soma(7))
+
+        // funcoes anonimas -- não possue nome
+        //tecnica de wrapper
+        var exibirSaudacao = function() {
+            document.write('</br> Olá, tudo bem!!')
+
+        }
+        exibirSaudacao()
+
+
+        // funcao callback
+        function exibirArtigo (id, sucesso, erro) {
+            // logica: recuperar id via requisição http
+            if (true) {
+                sucesso('Funções de callback em JS', 'descrição de uma função de callback')
+            } else {
+                erro('Erro ao recuperar os dados')
+            }
+        }
+
+        var sucesso = function (titulo, descricao) {
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr/>')
+            document.write('<p>' + descricao + '</p>')
+        }
+
+        var erro = function (erro) {
+            documento.write('errooooooooooooo: ' + erro)
+        }
+    
+        exibirArtigo(1, sucesso, erro)
+
+        // 
     </script>
 </head>
 <body>
