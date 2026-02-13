@@ -96,6 +96,49 @@
         document.write(r + '</br>' + '<hr>')
 
         //----------------- funções nativas com datas --------------
+        var data = new Date()
+
+        // adicionar / remover data ----> get: recupera dados; set: seta dados
+        document.write(data.toString() + '</br>')
+        data.setDate(data.getDate() + 10)
+        document.write (data + '</br>')
+
+        // adicionar / remover data ----> get: recupera dados; set: seta dados
+        document.write(data.toString() + '</br>')
+        data.setMonth(data.getMonth() + 10)
+        document.write (data + '</br>')
+
+        // adicionar / remover data ----> get: recupera dados; set: seta dados
+        document.write(data.toString() + '</br>')
+        data.setFullYear(data.getFullYear() + 5)
+        document.write (data + '</br> </br>')
+
+        // subtração de datas
+        var date01 = new Date(2017, 2, 5)
+        var date02 = new Date(2026, 10, 15)
+
+        document.write(date01.toString())
+        document.write('<br>')
+        document.write(date02.toString())
+        document.write('<br>')
+
+        // converter datas para algo que possamos calcular
+        document.write(date01.getTime())
+        document.write('<br>')
+        document.write(date02.getTime())
+        document.write('<br>')
+
+        // encontrar qtd de millisegundos entre dat01 e date02
+        document.write(date02.getTime() - date01.getTime())
+        document.write('<br>')
+
+        // encontrar qtd de millisegundos entre dat01 e date02
+        document.write(date02.getFullYear() - date01.getFullYear())
+        document.write('<br>')
+
+
+
+        
 
     </script>
 </head>
