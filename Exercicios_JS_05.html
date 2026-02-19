@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validador de senha</title>
+</head>
+<body>
+     <input 
+        type="text" 
+        placeholder="digite uma senha"
+        id="senha"
+        style="width: 400px; height: 50px; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);"
+    >
+    <button 
+        onclick="entrar ()" 
+        style="width: 100px; height: 50px; border-radius: 10px; background-color: brown; color: white; cursor: pointer; ">
+        entrar
+    </button>
+
+    <!-- inicio do script -->
+    <script>
+        // validador de senha
+        function entrar (){
+        // Só converte para número quando vai fazer conta.
+        var senha = document.getElementById('senha').value
+        var temNum = false
+
+        for (var i = 0; i < senha.length;i++){
+            // isNaN = is Not a Number (Não é número)
+            // se NÂO for numero - true
+            // se for numero - false
+            if (!isNaN(senha[i]) && senha[i] !== ' ') {
+                temNum = true
+            }
+        }
+
+         if (senha.length <= 8 ) {
+            alert('digite uma senha com mais de 8 caracteres')
+        } else if (!temNum){
+            alert('A senha deve conter pelo menos um numero')
+        } else {
+            alert('senha valida!!')
+        }
+    }
+    </script>
+    <!-- fim script -->
+</body>
+</html>
