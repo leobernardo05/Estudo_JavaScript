@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior de 3 numeros</title>
+    <script>
+        // maior de três números -- comparação
+        var x = Number(prompt('Digite um num: '))
+        var y = Number(prompt('Digite outro num: '))
+        var z = Number(prompt('Digite outro num: '))
+        
+        if (isNaN(x) || isNaN (y) || isNaN (z)){
+            document.write('Digite valores validos')
+        } else if (x > y && x > z){
+            document.write('maior é: ' + x)
+        } else if (y > x && y > z) {
+            document.write('maior é: ' + y)
+        } else if (z > x && z > y) {
+            document.write('maior é: ' + z)
+        } else {
+            document.write('Existem valores iguais')
+        }
+    </script>
+</head>
+<body>
+     
+</body>
+</html>
