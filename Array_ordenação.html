@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo array</title>
+    <script>
+       var lista_coisas = []
+       lista_coisas[0] = 'Mochila'
+       lista_coisas[1]= 'Lapis'
+       lista_coisas[2] = 'Estojo'
+       lista_coisas[3] = 'Computador'
+
+        //ordenação alfabetica -- sort()    
+       console.log(lista_coisas.sort())
+
+       var lista_numeros = [1, 50, 3 ,  44, 51, 14, 7, 9, 8, 10]
+
+       console.log(lista_numeros.sort(ordenaNumeros)) //exemplo de função de callback também
+
+       function ordenaNumeros (a, b) {
+        return a - b
+        // < 0 = a orddenado antes de b
+        // > 0 = b ordenado antes de a
+        // == a ordem é mantida
+       }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
