@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <script>
+        // tratamento de erros
+        // Netflix
+        var video = Array()
+        video[1] = Array()
+        video[1]['nome'] = 'Naruto'
+        video[1]['categoria'] = 'Anime'
+
+        function getVideo (video) {
+            try { //tente
+                // logica
+                // http
+                console.log(video[0]['nome'])
+            } catch(erro){ //pegar
+                tratarErro(erro) //erro que está acontecendo no array!
+                console.log('Agora sim podemos tratar o erro')
+               throw new Error('Houve um erro, mas não se preocupe, estamos trabalhando nisso agora!') //usalmente utlizado com o catch para tratar erros!; lança o erro!
+            } finally { //finalmente
+                console.log('Sempre passa por aqui (try / catch)')
+            }
+
+            console.log('A aplicação não morreu')
+        }
+        function tratarErro(erro){
+            // logica para registrar o erro no servidor
+        }
+
+
+        getVideo (video)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
