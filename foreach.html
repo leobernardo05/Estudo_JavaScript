@@ -7,10 +7,16 @@
     <script>
         var listaFuncionarios = ['Joaquim', 'Thomas', 'Tereza', 'Debora', 'Maria']
 
-        listaFuncionarios.forEach(function(valor, indice, array){ //percorre cada um dos arrays!!
-            // logica de programação
-            document.write('indice: ' + indice + '| valor: ' + valor + '<br>')
-        })
+        // listaFuncionarios.forEach(function(valor, indice, array){ //percorre cada um dos arrays!!
+        //     // logica de programação
+        //     document.write('indice: ' + indice + '| valor: ' + valor + '<br>')
+        // })
+
+        var f = function (valor, indice){
+            document.write(valor, indice + '<br>')
+        }
+
+        listaFuncionarios.forEach(f)
 
     </script>
 </head>
