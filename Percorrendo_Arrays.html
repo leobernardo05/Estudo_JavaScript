@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo array</title>
+    <script>
+        // Percorrendo Arrays
+        var frutas = ['Banana', 'Maça', 'Uva', 'Jaca']
+        for (var i = 0; i < frutas.length; i++){ 
+            document.write(frutas[i] + '<br>')
+        }
+        document.write('<hr>')
+        // percorrendo array multidimensional
+        var lista_coisas = [
+            ['Uno, Palio', 'Gol', 'Golf'] //carros
+            ['CG150', 'Fazer', 'Bros'] //motos
+        ]
+
+        // percorre a linha(I) da matriz
+        for(var i = 0;i < lista_coisas.length;i++ ) {
+            // percorre a coluna(J) da matriz
+            for (var j = 0;j < lista_coisas[i].length; j++){
+                document.write(lista_coisas[i][j] + '<br>') //aqui acessaria a linha juntamente com a coluna
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
