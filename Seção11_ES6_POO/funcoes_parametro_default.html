@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // boa pratica de desenvolvimento, pois sem parametros notifica o que está default
+       function contarUmaHistoria(personagem = 'Fubá', atividade = 'Sem atividade', nome_dono = 'Sem nome do dono'){
+        document.write(`Era uma vez um cachorro chamado ${personagem}
+        ele adorava ${atividade}
+        seu dono era ${nome_dono}`)
+       } 
+
+       contarUmaHistoria('Ralf', undefined, 'João')
+    </script>
+    <title>Estudo JS</title>
+</head>
+<body>
+
+</body>
+</html>
+
