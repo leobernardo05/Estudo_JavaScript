@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // 3 escopos: global, função e bloco
+
+        // var escopo global
+        // var serie = 'Friends'
+
+        // function x(){
+        //     // var escopo função
+        //     var serie = 'Game of Thrones'
+        //     console.log('escopo de função: ' + serie)
+
+        //     if (true){
+        //         console.log(serie)
+        //     }
+        // }   
+
+        // x()
+
+        // if(true){
+        //     // sofre um hosting, sai do escopo de bloco e entra no escopo de função
+        //     var serie = 'The walking Dead'
+        //     x()
+        //     console.log('bloco:' + serie)
+
+        // }
+
+        if (true){
+            let serie = "Friends"
+            console.log(serie)
+        }
+
+        // dá erro, pois preserva onde foi criado, não faz hosting
+        console.log(serie)
+
+    </script>
+    <title>Estudo JS</title>
+</head>
+<body>
+
+</body>
+</html>
+
