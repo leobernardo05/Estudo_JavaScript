@@ -7,6 +7,7 @@
     <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
+        // apenas abstração, não há nenhum modelo 
         // modelo da entidade/objeto
         class ContaBancaria {
             // agencia
@@ -14,14 +15,43 @@
             // saldo 
             // limite
             constructor () {
-                // atributos
+                // atributos pre definidos
                 this.agencia = 1075
                 this.numeroConta = 1111
-                this.saldo = 0
+                this.saldo = 20
                 this.limite = 100
+            }
+            // ação metodos
+            depositar (valorDeposito) {
+                this.saldo += valorDeposito 
+            }
+            // ação - metodos
+            sacar (valorSaque) {
+                this.saldo -= valorSaque
+            }
+            // ação - metodos
+            consultarSaldo () {
+                return this.saldo
             }
 
         }
+
+        // a classe ContaBancaria é um objeto, logo extansiada pelo atributo 'x'
+        // conta x
+        let x = new ContaBancaria()
+        // conta y
+        let y = new ContaBancaria()
+
+        console.log(x.consultarSaldo()) // 20 reais
+        x.depositar(500) // 20 + 500
+        console.log(x.consultarSaldo()) //total = 520
+        x.sacar(200) // 520 - 200
+        console.log(x.consultarSaldo()) //total = 320
+
+        console.log(y.consultarSaldo()) //mantém o padrão do constructor
+
+
+
     </script>
 </head>
 <body>
