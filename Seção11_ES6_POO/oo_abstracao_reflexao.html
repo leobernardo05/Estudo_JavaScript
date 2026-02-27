@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // um software de marcenaria 
+        // cadeira e sofá
+
+        // ------------ paradigma procedural -------
+        // cadeira
+        // array de cadeiras
+        let cadeiras = Array()
+
+        cadeiras[0] = Array()
+        cadeiras[0]['qtde_pernas'] = 4
+        cadeiras[0]['giratoria'] = false 
+        cadeiras[0]['cor'] = 'vermelha'
+
+        cadeiras[1] = Array()
+        cadeiras[1]['qtde_pernas'] = 3
+        cadeiras[1]['giratoria'] = false 
+        cadeiras[1]['cor'] = 'azul'
+
+        cadeiras[2] = Array()
+        cadeiras[2]['qtde_pernas'] = 4
+        cadeiras[2]['giratoria'] = true 
+        cadeiras[2]['cor'] = 'preta'
+        
+        function girar_cadeira (indice) {
+            if (cadeiras[indice]['giratoria'] === true) {
+                console.log('girou')
+            } else {
+                console.log('cadeira não é giratoria')
+            }
+        }
+
+        function adicionar_cadeira(qtde_pernas, giratoria, cor){
+            let cadeira = Array
+            cadeira['qtde_pernas'] = qtde_pernas
+            cadeira['giratoria'] = giratoria
+            cadeira['cor'] = cor
+
+            // push = empurrar, ou seja, coloca o array 'cadeira' no array cadeiras!!
+            cadeiras.push(cadeira)
+        }
+
+        console.log(cadeiras) //somente os 3 indices definidos 
+
+        adicionar_cadeira(6, true, 'blue')
+        console.log(cadeiras)//nova cadeira adicionada
+
+        girar_cadeira(2)
+
+        //------------  paradigma de orientações ao objeto
+        class Cadeira {
+            constructor (qtde_pernas, giratoria, cor){
+                this.qtde_pernas = qtde_pernas
+                this.giratoria = giratoria
+                this.cor = cor //this recebe os parametro do metodo constructor
+            }
+
+            girarCadeira () {
+                if (this.giratoria == true) {
+                    console.log('é giratoria')
+                } else {
+                    console.log('não é giratoria')
+                }
+            }
+        }
+
+        let cadeira = new Cadeira(4,false, 'blue')
+        console.log(Cadeira)
+        cadeira.girarCadeira()
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
