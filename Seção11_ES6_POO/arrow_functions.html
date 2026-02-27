@@ -7,13 +7,46 @@
     <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        const arrowFunction = () => {
+    // função simples
+    function funcaoSimples () {
+        console.log('Função simples')
+    }
+
+    funcaoSimples()
+
+
+    // arrow function
+    const arrowFunction = () => {
             console.log("arrow function")
         }
 
-        arrowFunction()
+    arrowFunction()
 
-        
+    // treinando com arrow function
+    let quadrado = (x) => { //se for apenas um parametro não precisa de paranteses - caso seja mais, precisa
+        x = parseInt(prompt('digite um valor: '))
+        document.write(`o quadrado de ${x} é: ${x*x} <br>`)
+    }
+    
+    quadrado()
+
+    // facilita o codigo deixando-o mais simples
+    let soma = (y,z) => y+z //return implicito!
+    document.write (`a soma é: ${soma(5,8)} <br>`)  
+    
+    // Exercio impar ou par com arrow functions
+    let parOuImpar = (numero) => {
+         numero % 2 == 0 ? 'par' : 'impar'  //if ternario;
+        /*if(numero % 2 == 0){
+            document.write(`${numero} é par`)
+            // return 'par'
+        } else {
+            document.write(`${numero} é impar`)
+            // return impar
+        }*/
+    }
+
+    parOuImpar(parseInt(prompt('Digite um numero: ')))
     </script>
 </head>
 <body>
