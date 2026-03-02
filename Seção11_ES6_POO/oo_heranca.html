@@ -7,7 +7,47 @@
     <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-       
+        //herança - reutilização/manutenção
+        // objeto cachorro 
+        class Cachorro {
+            // inicializando atributos cachorro
+            constructor (){
+                this.cor = 'black'
+                this.tamanho = 30
+                this.orelhas = 'big and fallen'
+            }
+            correr (){
+                console.log('Run')
+            }
+            dormir (){
+                console.log ('Sleep')
+            }
+            rosnar () {
+                console.log('Growl')
+            }
+        }
+
+        // objeto passaro
+        class Passaro {
+            // inicializando atributos
+            constructor (){
+                this.cor = 'Blue'
+                this.tamanho = 25
+                this.bico = 'Small'
+            }
+            voar () {
+                console.log('to fly')
+            }
+            dormir (){
+                console.log('sleep')
+            }
+        }
+
+        let cachorro = new Cachorro ()
+        let passaro = new Passaro ()
+
+        console.log(cachorro)
+        console.log(passaro)
     </script>
 </head>
 <body>
