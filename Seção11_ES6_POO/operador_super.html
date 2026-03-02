@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // ------------herança --------
+        // superclasse
+        class Animal {
+            constructor (cor, tamanho, peso){
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+
+            dormir (){
+                console.log ('dormir')
+            }
+        }
+        // subclasse passaro de animal
+        class PassaroHeranca extends Animal {
+            constructor (cor, tamanho, peso, bico){
+                super(cor, tamanho, peso)
+                this.bico = bico 
+            }
+            voar () {
+                console.log('voando')
+            }
+        }
+
+        // subclasse papagaio de passaro
+        class Papagaio  extends PassaroHeranca{
+            constructor (cor, tamanho, peso, bico, falar) {
+                super(cor, tamanho, peso)
+                this.sabeFalar = falar
+            }
+            falar () {
+                if (this.sabeFalar == true) {
+                    console.log('fala muito')
+                } else {
+                    console.log('não fala nada')
+                }
+            }
+        }
+
+        let passaroHeranca = new PassaroHeranca ()
+        console.log(passaroHeranca)
+
+        let papagaio1 = new Papagaio('verde', 10, 2, 'pequeno', false)
+        console.log(papagaio1)
+        papagaio1.falar()
+
+        let papagaio2 = new Papagaio('amarelo', 20, 2.5, 'grande', true)
+        console.log(papagaio2)
+        papagaio2.falar()
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
