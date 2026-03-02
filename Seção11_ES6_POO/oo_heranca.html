@@ -52,9 +52,10 @@
         // ------------herança --------
         // superclasse
         class Animal {
-            constructor (cor, tamanho){
+            constructor (cor, tamanho, peso){
                 this.cor = cor
                 this.tamanho = tamanho
+                this.peso = peso
             }
 
             dormir (){
@@ -64,19 +65,26 @@
 
         // subclasse cachorro de animal
         class CachorroHeranca extends Animal {
-            constructor () {
-                super('blue', 30)
-                this.orelhas = 'Pequenas' 
+            constructor (cor, tamanho, peso, orelhas) {
+                super(cor, tamanho, peso)
+                this.orelhas = orelhas
             }
             Rosnar () {
                 console.log('rosna')
             }
         }
 
+        // subclasse Pug de Cachorro Herança
+        class Pug extends CachorroHeranca {
+            constructor () {
+                super('white', 60, 30, 'pequenas')
+            }
+        }
+
         // subclasse passaro de animal
         class PassaroHeranca extends Animal {
-            constructor (){
-                super('rosa', 60)
+            constructor (cor, tamanho, peso){
+                super(cor, tamanho, peso)
                 this.bico = 'Grande'
             }
             voar () {
@@ -87,7 +95,7 @@
         // subclasse papagaio de passaro
         class Papagaio  extends PassaroHeranca{
             constructor () {
-                super()
+                super('verde', 60, 25)
                 this.sabeFalar = 'sim'
             }
             falar () {
@@ -103,6 +111,10 @@
 
         // classe CachorroHerança herda o metodo dormir de Animal
         cachorroHeranca.dormir()
+
+        let pug = new Pug()
+        console.log(pug)
+        pug.Rosnar()
 
         let papagaio = new Papagaio()
         console.log(papagaio)
