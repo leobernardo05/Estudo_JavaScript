@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //objeto    
+       class Tv {
+        // constutor - inicializa os objetos
+        constructor () {
+            // o underscore indica para o programador que é um objeto private, já que o JS nn suporta o private
+            this._relacaoCanais = Array (2, 4,5,7,10)
+            this._canalAtivo = 5
+            this._volume = 5
+        }
+        // getters and settes
+        get canalAtivo () { //---> lê o atributo
+            return this._canalAtivo
+        }
+
+        // camada de segurança
+        set canalAtivo (canal) { //---> modifica o atributo
+            if (this._relacaoCanais.indexOf (canal) !== -1) { //retorna o primeiro indice em que o elemento pode ser encontrado no array
+                console.log('Canal pertence a relação de canais') 
+                this._canalAtivo = canal
+            } else {
+                console.log('canal não pertence a relação de canais')
+            }
+        }
+
+       }
+       let tv = new Tv ()
+        //chama a função 'canalAtivo' estabelecida pelo 'get'     
+       console.log(tv.canalAtivo)
+
+       tv.canalAtivo = 10
+        console.log(tv.canalAtivo)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
