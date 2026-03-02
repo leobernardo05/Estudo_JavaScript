@@ -7,7 +7,6 @@
     <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        //herança - reutilização/manutenção
         // objeto cachorro 
         class Cachorro {
             // inicializando atributos cachorro
@@ -46,8 +45,69 @@
         let cachorro = new Cachorro ()
         let passaro = new Passaro ()
 
-        console.log(cachorro)
-        console.log(passaro)
+        // console.log(cachorro)
+        // console.log(passaro)
+
+
+        // ------------herança --------
+        // superclasse
+        class Animal {
+            constructor (cor, tamanho){
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+
+            dormir (){
+                console.log ('dormir')
+            }
+        }
+
+        // subclasse cachorro de animal
+        class CachorroHeranca extends Animal {
+            constructor () {
+                super('blue', 30)
+                this.orelhas = 'Pequenas' 
+            }
+            Rosnar () {
+                console.log('rosna')
+            }
+        }
+
+        // subclasse passaro de animal
+        class PassaroHeranca extends Animal {
+            constructor (){
+                super('rosa', 60)
+                this.bico = 'Grande'
+            }
+            voar () {
+                console.log('voando')
+            }
+        }
+
+        // subclasse papagaio de passaro
+        class Papagaio  extends PassaroHeranca{
+            constructor () {
+                super()
+                this.sabeFalar = 'sim'
+            }
+            falar () {
+                console.log('falar')
+            }
+        }
+
+        let cachorroHeranca = new CachorroHeranca ()
+        let passaroHeranca = new PassaroHeranca ()
+
+        console.log(cachorroHeranca)
+        console.log(passaroHeranca)
+
+        // classe CachorroHerança herda o metodo dormir de Animal
+        cachorroHeranca.dormir()
+
+        let papagaio = new Papagaio()
+        console.log(papagaio)
+        papagaio.falar()
+
     </script>
 </head>
 <body>
