@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let assinatura = {
+            idCLiente: 1000,
+            descricao: 'Acesso a internet',
+            status () {
+                console.log('Ativo')
+            }
+        }
+
+        assinatura.status()
+        // a referencia passa a ser 'y' também
+        let y =assinatura
+        console.log(y.descricao)
+    
+        //
+        y.descricao = 'Internet + tv + telefone'
+
+        console.log(assinatura.descricao)
+        console.log(y.descricao)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+

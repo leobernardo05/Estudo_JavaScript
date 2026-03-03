@@ -7,18 +7,18 @@
     <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        // objeto literal
-      let pessoa = {
-        nome: 'josé',
-        idade: 45
-       }
-       console.log(pessoa.nome)
+        let pessoa = {
+            nome: 'maria',
+            idade: '40'
+        }
+        console.log(pessoa)
+        // ---------------------------- incluindo atributos
+        pessoa.sexo = 'Feminino'
+        console.log(pessoa)
 
-       pessoa.nome = 'Fernanda'
-       pessoa.idade = 15
-
-       console.log(pessoa.nome)
-       console.log(pessoa.idade)
+        // ------------ incluindo functions
+        pessoa.dizerOi = () => console.log('Olá, tudo bem? ')
+        pessoa.dizerOi()
     </script>
 </head>
 <body>
