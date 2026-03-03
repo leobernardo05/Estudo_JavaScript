@@ -14,11 +14,27 @@
                 this.preco = preco
             }
             verDescricao () {
-                console.log(`${this.descricao} por apenas ${preco}`)
+                console.log(`${this.descricao} por apenas ${this.preco}`)
             } 
         }
         let produto = new Produto ('notebook acer aspire 5', 2500)
         produto.verDescricao()
+
+        //-------------- objeto literal
+        let produtoLiteral = {
+            descricao: 'Geladeira', 
+            preco: 1800,
+            verDescricao: function(){
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+        produtoLiteral.verDescricao()
+        // --------------------------------------------
+        /*
+        formulario -> servidor
+            recupera dados e monta um objeto literal
+                obj literal -> JSON -> HTTP -> Server -> Armazena
+        */
     </script>
 </head>
 <body>
