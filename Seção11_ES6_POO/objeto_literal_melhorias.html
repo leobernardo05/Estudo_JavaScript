@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+       
+       let nome = 'Leo' //document.getElementById('nome').value
+       let idade = 18
+       let sexo = 'Masculino'
+       let profissao = 'Programador'
+
+       let objeto = {
+        nome: nome,
+        idade:idade, 
+        sexo:sexo,
+        profissao:profissao,
+        exibirResumo: function (){
+            console.log(`${this.nome}, ${idade} anos, ${sexo}, é ${profissao}`)
+        }
+       }
+
+       objeto.exibirResumo()
+    //--------------------- melhorias
+        let objeto2 = {
+            nomeTeste: nome, //nome = nome variavel / valor = valor da variavel
+            idade, 
+            sexo,
+            profissao, 
+            // não precisa mais colocar o nome 'function' --> codigo limnpo!!
+            exibirResumo(){
+                console.log(`${this.nomeTeste}, ${idade} anos, ${sexo}, é ${profissao}`)
+            }
+       }
+        console.log(objeto2)
+        objeto2.exibirResumo()
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
