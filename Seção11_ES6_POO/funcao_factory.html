@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // requisição http para conectar com o banco de dados
+        // resposta http
+        let Bicicleta1 = {
+            cor: 'Branca',
+            marcha: 'única',
+            aro: 12,
+            pedalar () {console.log('metodo pedalar acionado com sucesso')}
+        }
+
+        let Bicicleta2 = {
+            cor: 'Blue',
+            marcha: '18',
+            aro: 12,
+            pedalar () {console.log('metodo pedalar acionado com sucesso')}
+        }
+        // ---------- etc
+        console.log(Bicicleta1)
+
+        // ------------ metodo fabrica - funções factory
+        let BicicletaFactory = function (cor, marcha, aro) {
+            return {
+                // lógica
+                cor,
+                marcha,
+                aro,
+                pedalar () {console.log('metodo pedalar executado')}
+            }
+        }
+        let Bicicleta3 = BicicletaFactory('rosa', 26, 29)
+        console.log(Bicicleta3)
+     
+        let Bicicleta4 = BicicletaFactory('verde', 18, 26)
+        console.log(Bicicleta4)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
