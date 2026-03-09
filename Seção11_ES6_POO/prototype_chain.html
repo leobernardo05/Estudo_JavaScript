@@ -7,41 +7,21 @@
     <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        // aviao 
-        // atributos cor e modelo; metodo levantarVoo --- não sobrepor atributos!!!!
-        // objeto literal
-        let a1 = {
-            cor: 'Black',
-            modelo: "Airbus a380",
-            levantarVoo: function () {console.log('Levantar voo') }
-        }
+       //Object.prototype
+        //classe master     
+       let animal = {
+        atributo1: 'a'
+       }
+        //sublclasse   
+       let vertebrado = {
+        __proto__:animal, atributo2: 'b'
+       }
+        //subclasse da subclasse    
+       let ave = {
+         __proto__:vertebrado, atributo3: 'c'
+       }
+       console.log(ave.atributo1, ave.atributo3, ave.atributo2)
 
-        // função construtora 
-        let AviaoF = function (){
-            this.cor = 'Azul',
-            this.modelo = 'Boeing 787',
-            this.levantarVoo = function() {console.log('Levantar voo')}
-        }
-
-        let a2 = new AviaoF()
-        
-        // classe
-        class AviaoC {
-            constructor(){
-                this.cor = 'Vermelho'
-                this.modelo = 'Embraer E-Jets'
-            }
-
-            levantarVoo () {
-                console.log('levantar voo')
-            }
-        }
-
-        let a3 = new AviaoC()
-
-        console.log(a1)
-        console.log(a2)
-        console.log(a3)
     </script>
 </head>
 <body>
