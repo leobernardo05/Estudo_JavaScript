@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+                
+        // let frutas = ['Abacaxi', 'pera', 'Mamão', 'Uva']
+        // let a = frutas [0]
+        // let b = frutas [1]
+        // let c = frutas [2]
+
+        // console.log(a,b,c) -----> muito verboso
+
+        //destructuring
+        let frutas = ['Abacaxi', 'Pera', 'Mamão', 'Uva']
+        let [a, b = ' ', c, d, e = 'Banana'] = frutas //operação de desestruturação ----> a variavel segue a ordem do array 
+        // console.log(a, b, c , d , e)
+
+        let coisas = [['Abacaxi', 'uva', 'pera', 'melão'], ['José', 'Maria']]
+        let [[, ,f3], [,n2]] = coisas
+        
+        console.log(f3, n2)
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
