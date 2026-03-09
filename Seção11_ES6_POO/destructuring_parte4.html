@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // array 
+        /*let arr = [10,20,30,40]
+
+        let [a, ...resto] = arr
+
+        console.log(arr)
+        console.log(resto)*/
+
+        // destructuring juntamente com rest ou stred
+        let obj = {
+            a: 10, b: 20, c: 30, d: 40
+        }
+
+        let{a, ...z} = obj
+        console.log(a)
+        console.log(z)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
