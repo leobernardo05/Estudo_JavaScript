@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!--Babel utilizado para converter ES6 para ES5 em browser antigos-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // ------ destructing em classes --------
+        let produto = {
+            descricao: 'Notebook', 
+            preco: 1800, 
+            detalhes: {
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+
+        }
+        // composição
+        // é um
+        // tem um
+
+        // token do destructing varia
+        // array => []
+        // objeto => {}
+        // let{descricao, preco} = produto
+
+        let{descricao: d, preco: p, detalhes: {fabricante: f}} = produto
+        console.log(d, p, f)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
