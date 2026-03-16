@@ -112,7 +112,11 @@ ESTUDO_JAVASCRIPT
 │   ├── oo_encapsulamento.html
 │   ├── oo_heranca.html
 │   └── oo_polimorfismo.html
-│
+|
+├── Novas_atualizacoes_ES
+│   ├── generators.html
+│   └── 
+|
 ├── style.css
 ├── index.html
 ├── LICENSE
