@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <!-- exercicios JS -->
+    <script>
+        // ---------------- 1. Soma de números pares ------------------
+        // var n = parseInt(prompt('Digite um numero'))
+        /*var soma = 0
+        // soma de todos os pares até 'n'
+        for (var x = 0; x <= n ;x++) {
+            if (x % 2 == 1) {
+                continue
+            }
+            console.log("Números pares: " + x)
+            soma += x
+        }
+        console.log('Soma dos pares: ' + soma)*/
+        
+        // utilizando funções ------- mais profissional
+        function soma (n){
+            var somaPares = 0
+
+            for (var x = 0; x <= n; x++){
+                // verificação se é par
+                if (x % 2 == 1) {
+                    continue
+                }
+                // soma dos pares apos percorrer o laço
+                somaPares += x
+            }
+            return somaPares
+        }
+        // teste
+        let n = parseInt(prompt('Digite um numero: '))
+        console.log(`a soma dos pares é: ${soma(n)}`)
+    </script>
+</head>
+<body>
+</body>
+</html>
