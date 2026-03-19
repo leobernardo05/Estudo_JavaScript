@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <script>
+        // Exercicio 8 -------- Sistema de Conta Bancária (POO + lógica)
+        class contaBancaria {
+            constructor (nome, saldo){
+                this.titular = nome
+                this.saldo = saldo
+            }
+
+            depositar (valor) {
+                this.saldo += valor
+                return this.saldo
+            }
+
+            sacar (valor) {
+                if (this.saldo >= valor) {
+                    this.saldo -= valor 
+                } else {
+                    alert('você está no limite, não pode mais sacar')
+                }
+                return this.saldo
+            }
+
+            verSaldo () {
+                return this.saldo
+            }
+        }
+
+
+        let conta = new contaBancaria('Zeca', 1000)
+        console.log(conta.verSaldo())
+        console.log(conta.sacar(500))
+        console.log(conta.sacar(250))
+        console.log(conta.sacar(320))
+        console.log(conta.verSaldo())
+        // codigo finalizado com correção de logica basica!
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
