@@ -6,7 +6,22 @@
     <title>Estudo JS</title>
     <script>
         // Exercicio 6 -------- Filtrar números pares de um array
-        
+        function filtro(numRep) {
+            let numeros = []
+            let numerosPares = []
+            for (let i = 0; i < numRep; i++) {
+                let preencher = parseInt(prompt('digite um numero: '))
+                numeros.push(preencher) //irá adicionar os elementos do array
+            }
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros[i] % 2 === 0) {
+                    numerosPares.push(numeros[i]) //edita o errei para deixar apenas os pares
+                } 
+            }
+            return numerosPares // [i] não existe mais fora do loop(for)
+        }
+        let numRep = parseInt(prompt('quantos numeros você deseja no array: '))
+        console.log(`o array só de pares é: ${filtro(numRep)}`)
     </script>
 </head>
 <body>
