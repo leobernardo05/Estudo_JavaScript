@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <script>
+        // Exercicio 4 -------- maior numero de um Array 
+        function maiorNumero(numRep){
+            let numeros = []
+            let maior = -Infinity
+            // preencher o array 
+            for (let i = 0; i < numRep; i++){
+                let num = parseInt(prompt('digite um num: '))
+                numeros.push(num) //adiciona ou retorna mais elementos no final de um array
+            }
+            // encontrar o maior
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros[i] > maior) {
+                    maior = numeros[i]
+                }
+            }
+            return maior
+        }
+        let numRep = parseInt(prompt('quantos numeros você quer digitar? '))
+        console.log(`o maior numero é: ${maiorNumero(numRep)}`)
+        // logica corrigida com facilidade de algumas propriedades do JS
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
