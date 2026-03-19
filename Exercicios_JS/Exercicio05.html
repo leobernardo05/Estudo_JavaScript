@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <script>
+        // Exercicio 5 -------- contar letras repetida de uma string
+        function contarLetras(nome){
+            // let contagem = [nome] ---> erro principal
+            let resultado = {} //inicializa um objeto literal vazio - tabela hash - ele que armazena para contar
+            let letras = nome.split('') //transforma em array - quebra a string em letras
+            // ["b", "a", "n", "a", "n", "a"] -- exemplo
+            letras.forEach ((letra) => { //passa por uma função de callback
+            // for (let letra of nome) - equivalente a isso 
+                if (resultado[letra]){
+                    // resultado[letra] = (resultado[letra] || 0) + 1
+                    resultado[letra]++
+                } else {
+                    resultado[letra] = 1
+                }
+                return resultado
+            })
+        }
+        let nome = (prompt('digite uma string: '))
+        console.log(`a quantidade de letras é: ${contarLetras(nome)}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
