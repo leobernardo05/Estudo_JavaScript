@@ -6,7 +6,19 @@
     <title>Estudo JS</title>
     <script>
         // Exercicio 7 -------- Classe Produto (POO básica)
-        
+        class Produto {
+            constructor (nome, preco, quantidade) {
+                this.nome = nome //não precisa de virgula
+                this.preco = preco
+                this.quantidade = quantidade
+            }
+            valorTotal(){
+                let valor = this.preco * this.quantidade
+                return valor
+            }
+        }
+        let p = new Produto('Notebook Acer Aspire 5', 3000, 3)
+        console.log('O valor da compra é: ' + p.valorTotal())
     </script>
 </head>
 <body>
