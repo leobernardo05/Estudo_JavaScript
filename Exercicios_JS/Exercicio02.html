@@ -7,8 +7,12 @@
     <!-- exercicios JS -->
     <script>
         // ---------------- 2. Inverter uma string ------------------
+        let nomeInvertido = ''
         function inverter (nome) {
-            
+            for (let i = nome.length - 1; i >= 0; i--) {
+                nomeInvertido += nome[i]
+            }
+            return nomeInvertido
         }
         let nome = prompt('Digite uma string')
         console.log(`A string invertida é: ${inverter(nome)}`)
