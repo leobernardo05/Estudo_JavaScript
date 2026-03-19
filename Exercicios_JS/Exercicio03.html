@@ -7,11 +7,23 @@
     <!-- exercicios JS -->
     <script>
         // ---------------- 3. verificação de numeros primos ------------------
-        function primo (num){
-            console.log(num)
+        // primo é aquele que é divicivel por 1 e ele mesmo: 2,3,5,7,11,13,17,19, 23...
+        function primo(num) {
+            if (num <= 1) {
+                return 'não é primo'
+            }
+            for (let i = 2;i <= Math.sqrt(num);i++) { //verifica a raiz quadrada do num
+                if (num % i === 0){
+                    return 'não é primo'
+                }
+            }
+            
+            return 'É primo'
+            
         }
         let num = parseInt(prompt('Digite um num para verificar se é primo: '))
         console.log(`${num} é ${primo(num)}`)
+        // erros de logica corrigido
     </script>
 </head>
 <body>
