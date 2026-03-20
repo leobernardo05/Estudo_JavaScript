@@ -17,27 +17,31 @@
             id="titulo"
             type="text" 
             class="form-control mb-3" 
+            id = "titulo"
             placeholder="Título da atividade"
         >
         <!-- descrição -->
         <input 
             type="text" 
             class="form-control mb-3" 
+            id="descricao"
             placeholder="Descrição da atividade"
         >
         <!-- botão para inserir dados -->
         <button 
-            class="btn btn-primary w-100 fw-bold" 
-            id="botao"
+            class="btn btn-success w-100 fw-bold" 
+            id="botaoInserir"
+            onclick="inserirAtividades()"
         >
             Inserir
         </button>
         <!-- botão listar tarefas -->
         <button 
-            class="btn btn-primary w-100 fw-bold" 
-            id="botao"
+            class="btn btn-danger mt-2 w-100 fw-bold" 
+            id="botaoMostrar"
+            onclick="mostrarAtividades()"
         >
-        Mostrar atividades
+            Mostrar atividades
         </button>
     </div>
 </div>
