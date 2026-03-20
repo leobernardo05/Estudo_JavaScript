@@ -41,9 +41,9 @@ function mostrarAtividades(){
             <strong>${tarefa.titulo}</strong>
             <p>${tarefa.descricao}</p>
         `
-        item.style.cssText = "width: 400px; border-radius: 20px; display: flex"
-
-        item.className = "card p-2 mb-1 "
+        item.classList.add("card", "p-2", "mt-1")
+        item.style.width = "400px"
+        item.style.borderRadius = "20px"
         // adicionar na tela 
         lista.appendChild(item)
     }
