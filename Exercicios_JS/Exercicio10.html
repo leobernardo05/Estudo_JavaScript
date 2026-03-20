@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <script>
+        // exercicio 10 ---- Lista de tarefas (To-Do) com objetos
+        function segundoMaior (numRep) {
+            let numeros = []
+            let maior = -Infinity
+            let segundoMaior = -Infinity
+            // insere os numeros
+            for (let i = 0; i < numRep;i++) {
+                let num = parseInt(prompt('digite um num: '))
+                numeros.push(num)
+            }
+            // percorre o array
+            for (let i = 0; i < numeros.length;i++) {
+                let atual = numeros[i]
+                if (atual > maior) {
+                    segundoMaior = maior
+                    maior = atual
+                } else if (atual > segundoMaior && atual !== maior){
+                    segundoMaior = atual
+                }
+            }
+            return segundoMaior
+        }
+        let numRep = parseInt(prompt('digite quantos numeros você quer no seu array: '))
+        console.log(`o segundo maior numero é: ${segundoMaior(numRep)}`)
+        // exercicio corrigido - sinti um pouco de dificuldade, é bom refazer!
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
