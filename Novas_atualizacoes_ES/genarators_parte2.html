@@ -8,20 +8,36 @@
 <body>
     <div id="teste"></div>
     <script>
-        function* testeGenerator(){
-            console.log('teste 1')
-            yield console.log('teste 2') //executa tudo que vem antes dela!
-            console.log('teste 3')
+       function* conversar () {
+        let opcao = yield 'E ai, tudo bem?'
 
-            return 'Teste 4'
-        }
-        let meuGenerator = testeGenerator() //objeto iterator
-        console.log(meuGenerator)
-        meuGenerator.next() //next é palavra reservada - que executa toda a function
-        console.log('------')
-        meuGenerator.next()
-        console.log('--------')
-        console.log(meuGenerator.next())
+        // o parametro enviado no next
+        yield 'Otimo, fico feliz'
+
+        yield 'Terceira etapa' + opcao
+       }
+       function acao () {
+        let iteracao = conversa.next() //
+        console.log(iteracao)
+
+        iteracao = conversa.next('sim') //
+        console.log(iteracao)
+
+        iteracao = conversa.next() //
+        console.log(iteracao)
+       }
+
+       let conversa = conversar() //objeto iterador
+
+       let iteracao = conversa.next() //
+       console.log(iteracao)
+
+       iteracao = conversa.next('sim')
+       console.log(iteracao)
+
+       iteracao = conversa.next() //
+       console.log(iteracao)
+       
     </script>
 </body>
 </html>
