@@ -10,13 +10,20 @@
        function* conversar () {
         // escopo proprio
         // opcao
+
+        // 1 bloco
         let opcao = yield 'E ai, tudo bem?'
 
+        // 2 bloco
         // o parametro enviado no next
         if(opcao == 'sim') {
             yield 'Ótimo, fico feliz' 
+            
+            opcao = yield 'Como posso te ajudar? Quer uma piada?'
         } else {
             yield 'Respire fundo e tenha paciência'
+            
+            yield 'digite 1 para compras, 2 par vendas ou 3 para falar com um atendente'
         }
 
         
