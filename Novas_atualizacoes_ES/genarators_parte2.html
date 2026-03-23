@@ -21,18 +21,18 @@
             
             opcao = yield 'Como posso te ajudar? Quer uma piada?'
 
-            if (opcao == 'sim'){
-                fetch('piadas.json')
-                    .then(response => response.json())
-                    .then(piadas => {
-                        if(piadas.length > 0) {
-                            let idx = Math.floor(Math.random() * piadas.length)
-                            let piada = piadas[idx]
+           if (opcao == 'sim'){
+            fetch('piadas.json')
+                .then(response => response.json())
+                .then(piadas => {
+                    if(piadas.length > 0) {
+                        let idx = Math.floor(Math.random() * piadas.length)
+                        let piada = piadas[idx]
 
-                            console.log(piada)
-                        }
-            }) 
-                yield 'Te contei a piada no console 😅 (olha lá)'
+                        console.log(piada)
+                    }
+                })
+            yield 'Buscando uma piada pra você... 😅'
             } else {
                 yield 'digite 1 para compras, 2 par vendas ou 3 para falar com um atendente'
             }
