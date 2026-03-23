@@ -6,39 +6,35 @@
     <title>Estudo JS</title>
 </head>
 <body>
-    <div id="teste"></div>
     <script>
        function* conversar () {
+        // escopo proprio
+        // opcao
         let opcao = yield 'E ai, tudo bem?'
 
         // o parametro enviado no next
-        yield 'Otimo, fico feliz'
+        if(opcao == 'sim') {
+            yield 'Ótimo, fico feliz' 
+        } else {
+            yield 'Respire fundo e tenha paciência'
+        }
 
-        yield 'Terceira etapa' + opcao
+        
        }
-       function acao () {
-        let iteracao = conversa.next() //
-        console.log(iteracao)
-
-        iteracao = conversa.next('sim') //
-        console.log(iteracao)
-
-        iteracao = conversa.next() //
-        console.log(iteracao)
-       }
-
+       
        let conversa = conversar() //objeto iterador
 
-       let iteracao = conversa.next() //
-       console.log(iteracao)
-
-       iteracao = conversa.next('sim')
-       console.log(iteracao)
-
-       iteracao = conversa.next() //
-       console.log(iteracao)
+       function acao () {
+            let resposta = document.getElementById('resposta').value
+            let iteracao = conversa.next(resposta) //
+            console.log(iteracao)
+       }
        
     </script>
+    <div id="teste">
+        <button type="button" onclick="acao()">Avançar</button>
+        Resposta: <input type="text" id="resposta">
+    </div>
 </body>
 </html>
 
