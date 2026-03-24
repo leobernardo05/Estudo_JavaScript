@@ -9,6 +9,7 @@
     <script>
         //requisição HTTP 
         let resposta = {}
+        // um valor que pode estar disponível agora, no futuro ou nunca
        let promesa = new Promise((resolve, reject) => {
         try {
             setTimeout(() => {
@@ -26,6 +27,7 @@
                 console.log(promesa)     
                 console.log(resposta)     
             }, 4000)
+        // status promises: pending, fulfilled (realizado), reject
     </script>
 </body>
 </html>
