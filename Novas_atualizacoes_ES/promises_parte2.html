@@ -7,7 +7,31 @@
 </head>
 <body>
     <script>
-        
+        let promesa = new Promise((resolve, reject) => {
+            /*try {
+        } catch (e) {
+         }*/
+
+        //requisição http para recuperar uma relação de usuários
+        setTimeout(() => {
+            // requisição foi realizada de algum modo
+            let resposta_da_requisicao = {}
+
+            // erro na requisição
+            if(true){
+                resposta_da_requisicao = {
+                    codigo: 1050,
+                    erro: "falha de autorização"
+                }
+                reject(resposta_da_requisicao)
+            }
+
+        }, 4000)
+
+        reject()
+
+        resolve()
+        })
     </script>
 </body>
 </html>
