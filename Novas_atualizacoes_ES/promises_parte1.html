@@ -7,18 +7,25 @@
 </head>
 <body>
     <script>
+        //requisição HTTP 
+        let resposta = {}
        let promesa = new Promise((resolve, reject) => {
         try {
             setTimeout(() => {
-                resolve ('Promesa concluida com sucesso')     
+                resposta = {dados: {msg: 'Recuperamos os dados com sucesso'}}
+                resolve ('Promesa concluida com sucesso')  
             }, 3000)
         } catch(e){
             setTimeout(() => {
-                reject (e)     
+                reject (e) 
             }, 3000)
         }
        })
-       console.log(promesa)
+    
+       setTimeout(() => {
+                console.log(promesa)     
+                console.log(resposta)     
+            }, 4000)
     </script>
 </body>
 </html>
