@@ -14,23 +14,27 @@
 
         //requisição http para recuperar uma relação de usuários
         setTimeout(() => {
-            // requisição foi realizada de algum modo
+            // requisição foi realizada de algum modo --> http, ajax, etc...
             let resposta_da_requisicao = {}
 
             // erro na requisição
             if(true){
                 resposta_da_requisicao = {
                     codigo: 1050,
-                    erro: "falha de autorização"
+                    erro: "Falha de autorização"
                 }
                 reject(resposta_da_requisicao)
             }
 
+            resposta_da_requisicao = {
+                0: {id: 1, nome: 'João'},
+                1: {id: 2, nome: 'José'},
+                2: {id: 3, nome: 'Maria'},
+            }
+
+            resolve(resposta_da_requisicao)
+
         }, 4000)
-
-        reject()
-
-        resolve()
         })
     </script>
 </body>
