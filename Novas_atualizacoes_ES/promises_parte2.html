@@ -46,18 +46,27 @@
                     let resposta_da_requisicao = {}
 
                     // erro na requisição
-                    if(false){
+                    if(true){
                         resposta_da_requisicao = {
-                            codigo: 1050,
-                            erro: "Falha de autorização" //paassado como parametro para o catch
+                            codigo: 7788,
+                            erro: "Erro ao recuperar os posts dos usuarios" //paassado como parametro para o catch
                         }
                         reject(resposta_da_requisicao)
                     }
 
                     resposta_da_requisicao = {
-                        0: {id: 1, nome: 'João promise 2'},
-                        1: {id: 2, nome: 'José promise 2'},
-                        2: {id: 3, nome: 'Maria promise 2'},
+                        0: {id: 1, usauario_id: 1, posts: [
+                            {id: 1, post: 'Post 1'},
+                            {id: 2, post: 'Post 2'}
+                        ]},
+                        1: {id: 2, usauario_id: 2, posts: [
+                            {id: 3, post: 'Post 3'},
+                            {id: 4, post: 'Post 4'}
+                        ]},
+                        2: {id: 3, usauario_id: 3, posts: [
+                            {id: 5, post: 'Post 1'},
+                            {id: 4, post: 'Post 2'}
+                        ]}
                     }
 
                     resolve(resposta_da_requisicao)
@@ -66,8 +75,8 @@
                 // fim setTimeout
             }).then(dados => { //pode gerar novas promises após .then e gerar novas .thens a partir da promises
                 console.log('promise 2 ', dados)
-            }).then(param => { //pode gerar novas promises após .then e gerar novas .thens a partir da promises
-                console.log('Then 1 de promise 2 para then 2 de promise 2', param)
+            }).catch(erro => { //pode gerar novas promises após .then ou catch e gerar novas .thens a partir da promises
+                console.log('Falha na requisição', erro)
             }) 
             return 'Parametro 1 para o then 2'
         }).then(param => {  //pode ser adicionado variso .then
