@@ -18,10 +18,10 @@
             let resposta_da_requisicao = {}
 
             // erro na requisição
-            if(false){
+            if(true){
                 resposta_da_requisicao = {
                     codigo: 1050,
-                    erro: "Falha de autorização"
+                    erro: "Falha de autorização" //paassado como parametro para o catch
                 }
                 reject(resposta_da_requisicao)
             }
@@ -43,7 +43,13 @@
             return 'Parametro 2 para o then 3'
         }) .then(param2 => {  //pode ser adicionado variso .then
             console.log('Parametro 3', param2)
-        }) 
+        }).catch (erro => {
+            console.log('Erro disparado!', erro)
+        }).then(()=> {
+            console.log('then 4')
+        }).then(() => {
+            console.log('then 5') //executado após o catch
+        })
     </script>
 </body>
 </html>
