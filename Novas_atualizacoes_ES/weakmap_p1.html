@@ -17,6 +17,15 @@
             nome: 'Gabriela',
             profissao: 'Fisioterapeuta'
         }
+
+        // Wealmap ->  Referencia e vazamento de memoria
+
+        const objetos = [obj1, obj2]; //referencias
+        console.log('Original'); 
+        objetos.map((value, index) => console.log(index, value));
+        obj2.nome = 'João Brandão' //referencia para o objeto nome
+        console.log(obj2)
+
     </script>
 </body>
 </html>
