@@ -18,6 +18,17 @@
             profissao: 'Fisioterapeuta'
         }
 
+        const objetos = new Weakmap();
+        objetos.set(obj1, 'Informações do objeto 1')
+        objetos.set(obj2, 'Informações do objeto 2')
+
+        // não podemos percorrer esse WeakMap
+        console.log(objetos)
+
+        obj1 = null //Wealmap é responsavel por limpar a memoria e não deixar problemas como visto na aula p1.
+        
+        console.log(objetos); //GC
+        
     </script>
 </body>
 </html>
