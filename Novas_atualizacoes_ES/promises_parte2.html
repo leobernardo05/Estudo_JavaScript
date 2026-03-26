@@ -37,6 +37,13 @@
         }, 4000)
         }).then (dados => { // --> após finalizar o setTimeout o .then aproveita para realizar outra funcionalidade
             console.log('operação sequencial', dados)
+            let promesa2 = new Promise((resolve, reject) => {
+                
+            }).then(() => { //pode gerar novas promises após .then e gerar novas .thens a partir da promises
+
+            }).then(() => {
+
+            }) 
             return 'Parametro 1 para o then 2'
         }).then(param => {  //pode ser adicionado variso .then
             console.log('Then 2', param)
