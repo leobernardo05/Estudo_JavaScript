@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+<body>
+    <script>
+        // pega uma objeto e vonverte para array com o par e valor
+      let objeto = {
+        nome: 'Bernardo',
+        profissional: {
+            site: 'leobernardoma.net.br',
+            profissao: 'Programador'
+        },
+        hobbies: [
+            {id: 1, hobby: 'Jogar bola'},
+            {id: 2, hobby: 'Natação'},
+            
+        ],
+        país: 'Brasil'
+      }
+    //   console.log(objeto)
+      console.log(Object.values(objeto)) //ES8 ---> deixa o array mais 'harmonico'
+      console.log(Object.entries(objeto)) //ES8 ---> tranfarma em array com seu atributo e valoe
+    </script>
+</body>
+</html>
+
