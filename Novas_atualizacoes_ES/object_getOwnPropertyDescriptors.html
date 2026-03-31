@@ -45,12 +45,8 @@
         enumerable: false
       })*/
 
-      //descritor configurable: quando definido com false não pode deletar a propriedade 
-      for(let propriedade in objeto){
-        console.log(propriedade, objeto[propriedade])
-      }
-
-      Object.defineProperties(objeto, 'hobbies', {
+      //descritor configurable: quando definido com false não pode deletar a propriedade sem alterar outras configurações a não ser o enumarable
+      Object.defineProperties(objeto, 'país', {
         configurable: false
       })
         
