@@ -26,11 +26,26 @@
       
       //--
       //descritor writable: quando definido com o false, ele indica que o valor da propriedade não poderá ser modificado
-      Object.defineProperty(objeto, 'nome', {
+      /*Object.defineProperty(objeto, 'nome', {
         value: 'Bernardo',
         writable: false //não se altera o value 'nome'
       })
-    </script>
+        Object.defineProperty(objeto, 'nome', {
+        value: 'Bernardo',
+        writable: false //não se altera o value 'nome'
+        })*/   
+      
+      //--
+      //descritor enumerable: 
+      for(let propriedade in objeto){
+        console.log(propriedade, objeto[propriedade])
+      }
+
+      Object.defineProperties(objeto, 'hobbies', {
+        enumerable: false
+      })
+        
+      </script>
 </body>
 </html>
 
