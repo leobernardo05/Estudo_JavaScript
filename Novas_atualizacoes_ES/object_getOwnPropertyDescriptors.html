@@ -23,8 +23,13 @@
       //   descritores de propriedades
       //console.log(objeto)
       console.log(Object.getOwnPropertyDescriptor(objeto)) // ---> visualiza os descritores do objeto 
-      //descritor writable: quando definido com o false, ele indica que o valor da propriedade não poderá ser modificado
       
+      //--
+      //descritor writable: quando definido com o false, ele indica que o valor da propriedade não poderá ser modificado
+      Object.defineProperty(objeto, 'nome', {
+        value: 'Bernardo',
+        writable: false //não se altera o value 'nome'
+      })
     </script>
 </body>
 </html>
