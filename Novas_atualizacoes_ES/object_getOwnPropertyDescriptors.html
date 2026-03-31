@@ -36,13 +36,22 @@
         })*/   
       
       //--
-      //descritor enumerable: 
-      for(let propriedade in objeto){
+      //descritor enumerable: define se uma propriedade de objeto aparece em loops
+      /*for(let propriedade in objeto){
         console.log(propriedade, objeto[propriedade])
       }
 
       Object.defineProperties(objeto, 'hobbies', {
         enumerable: false
+      })*/
+
+      //descritor configurable: quando definido com false não pode deletar a propriedade 
+      for(let propriedade in objeto){
+        console.log(propriedade, objeto[propriedade])
+      }
+
+      Object.defineProperties(objeto, 'hobbies', {
+        configurable: false
       })
         
       </script>
