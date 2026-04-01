@@ -12,7 +12,7 @@
       let iteracaoAssincrona = async function () { //torna o código mais profissional
         for(let processo of processos){
           // processamentos
-          new Promise((resolve, reject) => {
+          await new Promise((resolve, reject) => {
             setTimeout(() => {
               console.log('Processamento assíncrono')
               resolve()
