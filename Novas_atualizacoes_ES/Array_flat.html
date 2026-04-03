@@ -7,10 +7,11 @@
 </head>
 <body>
     <script>
-        let arr = [1,2,3,4,[5,6,[7,8, 9, 10, 11, 12]]]
+        let arr = [1,2,3,4,[5,6,[7,8, 9, [10, 11, 12]]]]
         
-        arr2 = arr.flat() //facilita a transformação de arrays multidimensionais (achatando)
-
+        arr2 = arr.flat(2) //facilita a transformação de arrays multidimensionais (achatando)
+        //responsavel pela profundidade do array - achatando-o, ou seja, melhora o dimensionamento do array
+        console.log(arr)
         console.log(arr2)
     </script>
 </body>
