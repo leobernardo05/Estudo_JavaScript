@@ -7,7 +7,23 @@
 </head>
 <body>
     <script>
-       
+       let nomes = [
+        'Zeca, João, Maria',
+        'Zacarias, Rafel, Claudia',
+        'Joaquim, Creuza, Zefa'
+       ]
+       console.log(nomes)
+
+       let nomesMap = nomes.map(item => {
+            return item.split(',')
+       })
+
+       console.log(nomesMap)
+
+        let nomesFlatMap = nomes.flatMap(item => { //localiza a partir das ',' mais completo
+            return item.split(',')
+       })
+       console.log(nomesFlatMap)
     </script>
 </body>
 </html>
