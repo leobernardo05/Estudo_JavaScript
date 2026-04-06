@@ -16,20 +16,20 @@
         // (estatico) carregando o módulo antes da necessidade de utilizá-lo
         // import {saudacao, getEnderecoByCEP} from './import/lib.mjs'
 
-        document.querySelector('#btnSaudacao').addEventListener('click', () => {
-            import ('./import/lib.mjs')   
+        document.querySelector('#btnSaudacao').addEventListener('click', async () => {
+            import ('./import/lib.mjs')  //import dinamico --> promise
                 .then(mod => {
                     console.log(mod.saudacao())
                 })
         })        
 
-        document.querySelector('#btnCEP').addEventListener('click', () => {
+        document.querySelector('#btnCEP').addEventListener('click', async () => {
             
             let cep = document.querySelector('#cep').value
             
             if(cep.length == 8) {
                 
-                import ('./import/lib2.mjs')   
+                import ('./import/lib2.mjs') //promise  --> podendo ser utilizado o await
                     .then(mod => {
                         return mod.getEnderecoByCEP(cep)
                     })
