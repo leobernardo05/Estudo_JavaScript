@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+<body>
+    <script>
+        let dados = [
+            ['nome', 'Leonardo'], //nome: chave ; valor: Leonardo
+            ['profissional', [
+                ['site', 'leobernardoma.net.br'],
+                ['profissao', 'programador']
+            ]],
+            ['hobbies', ['nadar', 'ler']],
+            ['país', 'Brasil'] //país = chave ; Brasil
+        ]
+        console.log(Object.fromEntries(dados)) //tranforma o array no par chave e valor
+        // em JS, não temos suporte a arrays associativos
+        // objetos: chave e valor
+        //tranformando arrays em objetos.
+
+    </script>
+</body>
+</html>
+
