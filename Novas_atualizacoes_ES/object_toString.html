@@ -7,20 +7,22 @@
 </head>
 <body>
     <script>
-        let dados = [
-            ['nome', 'Leonardo'], //nome: chave ; valor: Leonardo
-            ['profissional', [
-                ['site', 'leobernardoma.net.br'],
-                ['profissao', 'programador']
-            ]],
-            ['hobbies', ['nadar', 'ler']],
-            ['país', 'Brasil'] //país = chave ; Brasil
-        ]
-        console.log(Object.fromEntries(dados)) //tranforma o array no par chave e valor
-        // em JS, não temos suporte a arrays associativos
-        // objetos: chave e valor
-        //tranformando arrays em objetos.
+        class Carro {
+            constructor (marca, modelo, ano){
+                this.marca = marca,
+                this.modelo = modelo,
+                this.ano = ano
+            }
+            toString(){
+                return `Carro da marca ${this.marca}, modelo ${this.modelo}, do ano ${this.ano}`
+            }
+        }
 
+        // [objetct Type]
+
+        let carro = new Carro('Jeep', 'Compass', 2024)
+
+        console.log(carro.toString()) //toString herda para todos os objetos --> agr esta sendo sobreescrevido
     </script>
 </body>
 </html>
