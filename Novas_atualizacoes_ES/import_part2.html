@@ -14,11 +14,13 @@
     <!-- obrigatoriamente tem que indicar que é um modulo! -->
     <script type="module">
         // (estatico) carregando o módulo antes da necessidade de utilizá-lo
-        import {saudacao, getEnderecoByCEP} from './import/lib.mjs'
+        // import {saudacao, getEnderecoByCEP} from './import/lib.mjs'
 
         document.querySelector('#btnSaudacao').addEventListener('click', () => {
             import ('./import/lib.mjs')   
-                console.log(saudacao())
+                .then(mod => {
+                    console.log(mod.saudacao())
+                })
         })        
 
         document.querySelector('#btnCEP').addEventListener('click', () => {
@@ -28,9 +30,14 @@
             if(cep.length == 8) {
                 
                 import ('./import/lib2.mjs')   
-                    .then(x => {
-                        x.getEnderecoByCEP(cep)
-                            .then(dados => console.log(dados))
+                    .then(mod => {
+                        return mod.getEnderecoByCEP(cep)
+                    })
+                    .then(dados => {
+                        console.log(dados)
+                    })
+                    .catch(erro => {
+                        console.error("Erro ao buscar CEP:", erro)
                     })
             }
         })        
