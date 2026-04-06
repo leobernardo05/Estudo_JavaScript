@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+    <body></body>
+    <!-- obrigatoriamente tem que indicar que é um modulo! -->
+    <script type="module">
+        import {saudacao, getEnderecoByCEP} from './import/lib.mjs'
+        console.log(saudacao())
+
+        getEnderecoByCEP('55295587')
+            .then(dados => console.log(dados))
+    </script>
+</html>
