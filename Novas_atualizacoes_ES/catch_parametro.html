@@ -7,22 +7,11 @@
 </head>
 <body>
     <script>
-        class Carro {
-            constructor (marca, modelo, ano){
-                this.marca = marca,
-                this.modelo = modelo,
-                this.ano = ano
-            }
-            toString(){
-                return `Carro da marca ${this.marca}, modelo ${this.modelo}, do ano ${this.ano}`
-            }
+        try {
+            throw 'houve um erro'
+        } catch { //a partir do ES10 não precisa mais do parametro de erro
+            console.log('Chegamos até aqui')
         }
-
-        // [objetct Type]
-
-        let carro = new Carro('Jeep', 'Compass', 2024)
-
-        console.log(carro.toString()) //toString herda para todos os objetos --> agr esta sendo sobreescrevido
     </script>
 </body>
 </html>
