@@ -7,23 +7,15 @@
 </head>
 <body>
     <script>
-       let nomes = [
-        'Zeca, João, Maria',
-        'Zacarias, Rafel, Claudia',
-        'Joaquim, Creuza, Zefa'
-       ]
-       console.log(nomes)
+       let texto = '                       teste                   '
+       console.log('.'+ texto.trimStart()) //remove no inicio
+       console.log(texto)
+       console.log('.' + texto.trimEnd) //remove ao final
+       
+       //-----------
 
-       let nomesMap = nomes.map(item => {
-            return item.split(',')
-       })
-
-       console.log(nomesMap)
-
-        let nomesFlatMap = nomes.flatMap(item => { //localiza a partir das ',' mais completo
-            return item.split(',')
-       })
-       console.log(nomesFlatMap)
+       console.log('.' + texto.trimLeft()) //remove a esquerda
+       console.log('.' + texto.trimRight().trimLeft() + '.') //remove a esqueda e a direita
     </script>
 </body>
 </html>
