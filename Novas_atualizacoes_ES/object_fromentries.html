@@ -7,7 +7,19 @@
 </head>
 <body>
     <script>
-        
+        let dados = [
+            ['nome', 'Leonardo'], //nome: chave ; valor: Leonardo
+            ['profissional', [
+                ['site', 'leobernardoma.net.br'],
+                ['profissao', 'programador']
+            ]],
+            ['hobbies', ['nadar', 'ler']],
+            ['país', 'Brasil'] //país = chave ; Brasil
+        ]
+        console.log(Object.fromEntries(dados)) //tranforma o array no par chave e valor
+        // em JS, não temos suporte a arrays associativos
+        // objetos: chave e valor
+
     </script>
 </body>
 </html>
