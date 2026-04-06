@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+<body>
+    <script>
+        class Carro {
+            constructor (marca, modelo, ano){
+                this.marca = marca,
+                this.modelo = modelo,
+                this.ano = ano
+            }
+            toString(){
+                return `Carro da marca ${this.marca}, modelo ${this.modelo}, do ano ${this.ano}`
+            }
+        }
+
+        // [objetct Type]
+
+        let carro = new Carro('Jeep', 'Compass', 2024)
+
+        console.log(carro.toString()) //toString herda para todos os objetos --> agr esta sendo sobreescrevido
+    </script>
+</body>
+</html>
+
