@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+    <body></body>
+    <script>
+        // orçamento pessoal
+       let obj = {
+        2026: {
+            janeiro: {
+                pessoal: 2000,
+                casa: 1500,
+                investimentos: 1000
+            },
+            fevereiro: {
+                pessoal: 1500,
+                casa: 1600,
+                investimentos: 800
+            }
+        }
+       }
+
+       console.log(obj['2026'].marco?.pessoal) //optional chaining --> não quebrando a aplicação!
+    //    undefined.pessoal
+     console.log(obj['2026'].janeiro.pessoal)
+    </script>
+</html>
