@@ -7,6 +7,31 @@
 </head>
     <body></body>
     <script>
-       
+    //    testando o operador logico OR
+    let teste1 = null || 'Valor a direita'
+    let teste2 = 0 || 'Valor a direita'
+    let teste3 = undefined || 'Valor a direita'
+    let teste4 = '' || 'Valor a direita'
+    let teste5 = 'Valor a esquerda' || 'Valor a direita'
+
+    console.log(teste1) // Valor a direita
+    console.log(teste2) // Valor a direita  
+    console.log(teste3) // Valor a direita
+    console.log(teste4) // Valor a direita  
+    console.log(teste5) // Valor a esquerda 
+    //o operador logico OR retorna o valor a direita se o valor a esquerda for falsy, caso contrario ele retorna o valor a esquerda
+    console.log('------------------')
+    // nulish coalescing (??)
+    teste1 = null ?? 'Valor a direita'
+    teste2 = 0 ?? 'Valor a direita' //é considerado valor utilizavel 
+    teste3 = undefined ?? 'Valor a direita'
+    teste4 = '' ?? 'Valor a direita' //é utilizavel
+    teste5 = 'Valor a esquerda' ?? 'Valor a direita'
+
+    console.log(teste1)
+    console.log(teste2)  
+    console.log(teste3)
+    console.log(teste4)  
+    console.log(teste5) 
     </script> 
 </html>
