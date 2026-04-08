@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+    <body></body>
+    <script>
+        const p1 = new Promise((resolve, reject) => {
+          setTimeout(() => {resolve('P1 resolvido')}, 3000)  
+        })
+
+        const p2 = new Promise((resolve, reject) => {
+          setTimeout(() => {resolve('P2 resolvido')}, 2000)  //primeira resolução 
+        })
+
+        const p3 = new Promise((resolve, reject) => {
+          setTimeout(() => {resolve('P3 resolvido')}, 4000)  
+        })
+
+        let promises = [p1,p2,p3]
+
+        Promise.any(promises) //Promise ---> any = qualquer
+            .then((resolvida) => {
+                console.log(resolvida)
+            })
+   </script> 
+</html>_
