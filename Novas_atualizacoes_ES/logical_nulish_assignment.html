@@ -7,6 +7,36 @@
 </head>
     <body></body>
     <script>
-        
+        let v1 = 10
+        let v2 = null //nula -> null ou undefined
+        //atribuição logica nula - logical nulish Assignment (??=)
+        v1 ??= 50 //só atribui se o valor for nulo
+        v2 ??= 20
+
+        console.log(v1,v2)
+
+        // -----------------------
+        let carro = {
+            marca: 'Chevrolet'
+        }
+
+        carro.marca ??= 'Volkswagen' //aqui não se atribui 
+        carro.modelo ??= 'Gol' //aqui se atribui, because is undefined
+
+        let animal = {
+            raca: null
+        }
+
+        animal.raca ??= 'Macaco' //aqui se atribui!!!
+
+        console.log(carro, animal)
+
+        let arr = ['uva', 'joão', null, undefined, 5, []]
+        arr.forEach((item, indice) => {
+            arr[indice] ??= '<Não informado>' //bacana
+        }) 
+
+        console.log(arr)
+
     </script> 
 </html>
