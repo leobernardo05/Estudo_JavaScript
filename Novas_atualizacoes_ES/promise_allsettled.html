@@ -7,24 +7,30 @@
 </head>
     <body></body>
     <script>
-        // orçamento pessoal
-       let obj = {
-        2026: {
-            janeiro: {
-                pessoal: 2000,
-                casa: 1500,
-                investimentos: 1000
-            },
-            fevereiro: {
-                pessoal: 1500,
-                casa: 1600,
-                investimentos: 800
-            }
-        }
-       }
+       const promise1 = new Promise((resolve, reject) => {
+            return setTimeout(() =>  resolve('Promise 1 resolvida'),2000)
+       })
 
-       console.log(obj['2026'].marco?.pessoal) //optional chaining --> não quebrando a aplicação!
-    //    undefined.pessoal
-     console.log(obj['2026'].janeiro.pessoal)
-    </script>
+       const promise2 = new Promise((resolve, reject) => {
+            return setTimeout(() =>  resolve('Promise 2 resolvida'),2000)
+       })
+
+       const promise3 = new Promise((resolve, reject) => {
+            return setTimeout(() =>  resolve('Promise 3 resolvida'),2000)
+       })
+
+       const promises = [promise1, promise2, promise3];
+
+       Promise.allSettled(promises) //é um método estático do JavaScript que recebe um array de promessas (promises) e retorna uma única promessa.
+       //retorna uma unica promise a partir de varias, como no exemplo
+            .then((resultados)=> {
+                resultados.forEach(resultado => {
+                    if(resultado.status == 'fulfilled') {
+                        console.log(resultado.value)
+                    } else {
+                        console.log(resultado.reason) // é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona, agindo como um "marcador"
+                    }
+                })
+            })
+    </script> 
 </html>
