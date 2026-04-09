@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+    <body></body>
+    <script>
+        class Pessoa {
+            id = null
+        }
+
+        class PessoaFisica extends Pessoa {
+            nome = 'Leonardo Bernardo'
+        }
+
+        class PessoaJuridica extends PessoaFisica {
+            razaoSocial = 'Leo Academy'
+        }
+
+        const pessoaFisica = new PessoaFisica()
+        const PessoaJuridica = new PessoaJuridica()
+
+        // console.log(pessoaFisica, pessoaJuridica);
+
+        console.log(Object.hasOwn(pessoaFisica, 'id'))
+    </script> 
+</html>_
