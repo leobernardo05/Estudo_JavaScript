@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+    <body></body>
+    <script>
+        class Funcionario {
+            departamento = "RH"
+            salario = 3500
+            #primeiroNome = 'João'
+            #ultimoNome = 'Maciel'
+
+            #nomeCompleto (){
+                return `${this.#primeiroNome} $this.{ultimoNome}`
+            }
+
+            showNome () {
+                return this.#nomeCompleto
+            }
+        }
+
+        const funcionario = new Funcionario();
+        console.log(funcionario)
+        console.log(funcionario.showNome)
+   </script> 
+</html>_
