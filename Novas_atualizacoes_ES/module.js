@@ -8,7 +8,7 @@ export async function fetchDados (){
     })
 }
 
-const dados = await fetchDados() //aguarda a resolução da promise
+const dados = await fetchDados() //aguarda a resolução da promise de forma mais enxuta
 console.log(dados)
 
 console.log('fim do processamento')
