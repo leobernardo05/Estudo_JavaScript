@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+    <body></body>
+    <script>
+        // antes - atributos só eram declarados dentro do constructor
+        // em outras linguagens como: python, java e PHP, continua a mesma coisa!s
+        class Funcionario {
+            constructor () {
+                this.departamento = 'RH';
+                this.saldo = 5555;
+            }
+        }
+
+        // atualmente (ES13) - Feature Class Field Declarations - declara no escopo da classe
+        class Funcionario {
+            departamento = 'RH'
+            saldo = 555555;
+        }
+   </script> 
+</html>_
