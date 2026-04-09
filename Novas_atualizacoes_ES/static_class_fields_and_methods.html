@@ -10,20 +10,22 @@
         class Funcionario {
             departamento = "RH"
             salario = 3500
-            #primeiroNome = 'João'
-            #ultimoNome = 'Maciel'
+            static #primeiroNome = 'João' //static -> torna reutilizavel sem a instância da classe
+            static #ultimoNome = 'Maciel'
 
-            #nomeCompleto (){
+            static #nomeCompleto (){ 
                 return `${this.#primeiroNome} $this.{ultimoNome}`
             }
 
-            showNome () {
+            static showNome () {
                 return this.#nomeCompleto
             }
         }
-
+        /*
         const funcionario = new Funcionario();
         console.log(funcionario)
-        console.log(funcionario.showNome)
+        console.log(funcionario.showNome)*/
+
+        console.log(Funcionario.showNome())
    </script> 
 </html>_
