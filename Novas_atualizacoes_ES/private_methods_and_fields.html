@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+</head>
+    <body></body>
+    <script>
+        // antes para implementar um objeto privado era utilizado o "_"
+        class Funcionario {
+            departamento = 'RH';
+            salrio = 5500.5;
+            _primeroNome = 'João';
+            _ultimoNome = 'Silva';
+        }
+
+        // atualmente utilização do prefixo '#' para implementação da visibilidade private
+        class FuncionarioNovo {
+            departamento = 'RH';
+            salario = 5500.55;
+            #primeiroNome = 'João'; //ajuste de visibilidade
+            #ultimonome = 'Silva';
+
+            #nomeCompleto() {
+                return `${this._primeroNome} ${this._ultimoNome}` //atualmente usa o hash (#) que não permite alteração na variavel
+            }
+
+            showNome () {
+                return this.#nomeCompleto;
+            }
+        }
+
+        const funcionario = new FuncionarioNovo()
+        console.log(funcionario._nomeCompleto());
+   </script> 
+</html>_
