@@ -27,5 +27,27 @@
         console.log(funcionario.showNome)*/
 
         console.log(Funcionario.showNome())
-   </script> 
+
+        // exemplo pratico
+        class Filme {
+            static proximoIdFilme = 1
+
+            constructor (titulo) {
+                this.titulo = titulo 
+
+                
+                this.Id = Filme.proximoIdFilme
+                Filme.proximoIdFilme++;
+            }
+
+            static getProximoIdFilme () {
+                return Filme.proximoIdFilme
+            }
+        }
+
+        const filme1 = new Filme('O pior filme do mundo')
+        console.log(filme1)
+        
+        console.log(Filme.getProximoIdFilme) //não precisa instanciar a classe para utilizar seus atributos
+        </script> 
 </html>_
