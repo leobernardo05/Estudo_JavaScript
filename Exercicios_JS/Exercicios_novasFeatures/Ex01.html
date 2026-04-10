@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estudo JS</title>
 </head>
 <body>
     <script>
-        // exercio 01 - contador de string
-        function contarString () {
-            return
+        // ------ exercio 01 - contador de palavras -------
+        let frase = (prompt('Digite uma palavra:'))
+        function contarString (frase) {
+            let textoLimpo = frase.trim(" ") //deixa sem espaços em branco
+            let textoSplit = textoLimpo.split(" ") //precisa de parametros
+            let contador = 0
+            for (let i = 0;i < textoSplit.length; i++) {
+                contador++
+            }
+
+            return contador
         }
-        alert(prompt('Digite uma palavra'))
-        console.log(`têm ${contarString()} na palavra digitada!`)
+        console.log(`têm ${contarString(frase)} palavras na frase digitada!`)
     </script>
 </body>
 </html>
