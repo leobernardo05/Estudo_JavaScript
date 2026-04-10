@@ -8,8 +8,8 @@
     <style>
         .containner {
             background-color: rgb(237, 233, 228);
-            width: 250px;
-            height: 160px;
+            width: 380px;
+            height: 180px;
             border-radius: 6px;
             border: 1px solid black ;
             margin: auto;
@@ -48,6 +48,7 @@
             <input type="email" placeholder="digite seu email" name="email" id="email">
             <input type="password" placeholder="digite sua senha" name="senha" id="senha">
             <button onclick="verificar()">verificar</button>
+            <p style="color: red; margin: auto;" id="erro"></p>
         </div>
     </body>
     <!-- fim corpo html -->
@@ -60,15 +61,43 @@
             let email = document.getElementById('email').value //sem .value é apenas uma string
             
             // implementação de regex
-            let temNumero = /[0-9]/.test(senha)
-            let temMaiuscula = /[A-Z]/.test(senha)
-            let temMinuscula = /[a-z]/.test(senha)
+            let temNumero = /[0-9]/.test(senha) //recebe o teste regex
+            let temMaiuscula = /[A-Z]/.test(senha) //recebe o teste regex
+            let temMinuscula = /[a-z]/.test(senha) //recebe o teste regex
+            let erro = [] //array para armazenar erros
+        
+            // verificação de tamanho
+            if (!(senha.length <= 8 && senha.length >= 5)) {
+                erro.push('Digite entre 5 e 8 caracteres')
+            }
+            // verificação se tem numero
+            if (!temNumero) {
+                erro.push('Digite ao menos um numero')
+            }
+            // verificação de letras maiusculas
+            if (!temMaiuscula) {    
+                erro.push('Digite pelo menos uma letra maiuscula')
+            } 
+            // verificação de letras minusculas
+            if (!temMinuscula) {
+                erro.push('Digite pelo menos uma letra minuscula')
+            }
             
-            if (senha.length <= 8 && senha.length >= 5 && temNumero && temMaiuscula && temMinuscula)  {
+            let paragrafo = document.getElementById('erro')
+            // exibição
+            if (erro.length === 0) {
+                paragrafo.style.color = "green"
+                paragrafo.innerHTML = "Senha válida ✅"
+            } else {
+                paragrafo.style.color = "red"
+                paragrafo.innerHTML = erro.join('<br>')
+            }
+
+            /*if (senha.length <= 8 && senha.length >= 5 && temNumero && temMaiuscula && temMinuscula)  {
                 alert('senha valida')
             } else {
                 alert('senha invalida')
-            }
+            }*/
         }
     </script>
     <!-- fim JS -->
