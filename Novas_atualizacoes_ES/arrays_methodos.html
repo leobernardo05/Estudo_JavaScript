@@ -8,5 +8,26 @@
     <body></body>
     <script>
        //novos metodos do ES14
+       const numeros = [5,3,2,1,4]
+
+       //toReversed(baseado no reverse)
+       //const arrayInvertido = numeros.reverse() // modifica o original
+        
+       const arrayInvertido = numeros.toReversed()
+       console.log(numeros, arrayInvertido)
+
+       //toSorted {baseado no sort}
+       const arrayOrdenado = numeros.toSorted()
+       console.log(numeros, arrayOrdenado)
+
+       //toSpliced {baseado no splice}
+       const arrayFatiado = numeros.toReplaced()
+       console.log(numeros, arrayFatiado)
+       
+       //with {baseado na notação de colchetes}
+       const arrayAlteradoCom = numeros.with(2,100)
+       console.log(numeros, arrayAlteradoCom) 
+          
+
     </script> 
 </html>_
