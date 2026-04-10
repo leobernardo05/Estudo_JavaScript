@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- inicio estilo -->
+    <style>
+        .containner {
+            background-color: rgb(237, 233, 228);
+            width: 250px;
+            height: 160px;
+            border-radius: 6px;
+            border: 1px solid black ;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0,0,0.5);
+        }
+
+        h4 {
+            margin-bottom: 6px;
+            color: black;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        input {
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 90%;
+        }
+
+        button {
+            margin: 0 auto;
+            color: white;
+            background-color: brown;
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+    <!-- fim estilo -->
+</head>
+    <!-- inicio corpo html -->
+    <body>
+        <div class="containner">
+            <h4>Validador de senha</h4>
+            <input type="email" placeholder="digite seu email" name="email" id="email">
+            <input type="password" placeholder="digite sua senha" name="senha" id="senha">
+            <button onclick="verificar()">verificar</button>
+        </div>
+    </body>
+    <!-- fim corpo html -->
+
+     <!-- inicio JS -->
+    <script>
+        // ------------- Ex-02 validador de senha (usar REGEX) ------------
+        function verificar () {
+            let senha = document.getElementById('senha').value //tranformar em numero
+            let email = document.getElementById('email').value //sem .value é apenas uma string
+            
+            if (senha.length <= 8 && senha.length >= 5)  {
+                alert('senha valida')
+            } else {
+                alert('senha invalida')
+            }
+            return
+        }
+    </script>
+    <!-- fim JS -->
+</html>
