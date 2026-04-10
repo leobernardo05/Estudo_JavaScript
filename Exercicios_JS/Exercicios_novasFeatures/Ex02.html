@@ -59,12 +59,16 @@
             let senha = document.getElementById('senha').value //tranformar em numero
             let email = document.getElementById('email').value //sem .value é apenas uma string
             
-            if (senha.length <= 8 && senha.length >= 5)  {
+            // implementação de regex
+            let temNumero = /[0-9]/.test(senha)
+            let temMaiuscula = /[A-Z]/.test(senha)
+            let temMinuscula = /[a-z]/.test(senha)
+            
+            if (senha.length <= 8 && senha.length >= 5 && temNumero && temMaiuscula && temMinuscula)  {
                 alert('senha valida')
             } else {
                 alert('senha invalida')
             }
-            return
         }
     </script>
     <!-- fim JS -->
