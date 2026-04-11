@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="containner">
+            <span>Produtos</span>
+            <input type="text" placeholder="digite qual o produto" name="produto" id="produto">
+
+            <span>Valor</span>
+            <input type="number" name="valor" placeholder="digite o valor do produto" id="valor">
+
+            <span>Quantidade</span>
+            <input type="number" placeholder="digite a quantidade" name="quantidade" id="quantidade">
+
+            <button onclick="adicionarLista()" class="adicionar">Adicionar a lista</button>
+            <button onclick="somarProdutos()" class="somar">Somar produtos</button>
+
+            <div class="resultado">
+                <span>valor total:</span>
+                <span id="resultado"></span>
+            </div>
+        </div>
+        <!-- lista do carrinho de compras -->
+        <div class="containner" style="margin-top: 10px;">
+            <h1 style="color: white; text-transform: uppercase; text-decoration: underline;">Lista de compras</h1>
+            <table>
+                <tr>
+                    <td>item</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

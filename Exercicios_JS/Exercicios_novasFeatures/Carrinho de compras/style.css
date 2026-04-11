@@ -1,0 +1,49 @@
+.containner {
+    background-color: #000758;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+span {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform : uppercase;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.adicionar {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    width: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.somar {
+    background-color: #ff8400;
+    width: 50%;
+    color: #fff;
+    margin-bottom: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
