@@ -1,43 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de compras</title>
+    <title>Carrinho de Compras</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <body>
-        <div class="containner">
-            <span>Produtos</span>
-            <input type="text" placeholder="digite qual o produto" name="produto" id="produto">
+<body>
 
-            <span>Valor</span>
-            <input type="number" name="valor" placeholder="digite o valor do produto" id="valor">
+    <div class="container">
+        <h2>Carrinho de Compras</h2>
 
-            <span>Quantidade</span>
-            <input type="number" placeholder="digite a quantidade" name="quantidade" id="quantidade">
+        <input type="text" id="produto" placeholder="Produto">
+        <input type="number" id="valor" placeholder="Valor">
+        <input type="number" id="quantidade" placeholder="Quantidade">
+        <input type="number" id="desconto" placeholder="Desconto">
 
-            <span>Desconto</span>
-            <input type="number" placeholder="digite o valor de desconto" name="desconto" id="desconto">
+        <button onclick="adicionarLista()">Adicionar</button>
+        <button onclick="somarProdutos()">Somar</button>
+        <button onclick="aplicarDesconto()">Aplicar Desconto</button>
 
-            <button onclick="adicionarLista()" class="adicionar">Adicionar a lista</button>
-            <button onclick="somarProdutos()" class="somar">Somar produtos</button>
-            <button onclick="aplicarDesconto()" class="desconto">Aplicar desconto</button>
+        <h3>Total: R$ <span id="resultado">0.00</span></h3>
 
-            <div class="resultado">
-                <span>valor total:</span>
-                <span id="resultado"></span>
-            </div>
-        </div>
-        <!-- lista do carrinho de compras -->
-        <div class="containner" style="margin-top: 10px;">
-            <h1 style="color: white; text-transform: uppercase; text-decoration: underline;">Lista de compras</h1>
-            <table>
-                <tr>
-                    <td>item</td>
-                </tr>
-            </table>
-        </div>
-    </body>
+        <h3>Lista:</h3>
+        <ul id="lista"></ul>
+    </div>
+
     <script src="script.js"></script>
+</body>
 </html>
