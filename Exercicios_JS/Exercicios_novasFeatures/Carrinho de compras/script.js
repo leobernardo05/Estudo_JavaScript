@@ -1,33 +1,56 @@
-// tem que usar includes() e implementar uma parte para desconto  
-function adicionarLista () {
-    let produto = document.getElementById('produto')
-    let valor = document.getElementById('valor')
-    let quantidade = document.getElementById('quantidade')
+// tem que usar includes() no exercício
+let produto = document.getElementById('produto')
+let valor = document.getElementById('valor')
+let quantidade = document.getElementById('quantidade')
+let desconto = document.getElementById('desconto')
 
+
+// class bd para salvar dados no localStorage e depois mostrar em adicionarLista
+class Bd {
+    constructor () {
+        this.chave = 'carrinho'
+    }
+
+    buscar() {
+        return JSON.parse(localStorage.getItem(this.chave) || [])
+    }
+
+    salvar(lista) {
+        localStorage.setItem(this.chave, JSON.stringify(lista))
+    }
 }
 
-class Bd {
+let bd = new Bd ()
+
+
+// função para adicionar a lista de compras
+function adicionarLista () {
 
 }
 
 // tem que usar o localStorage
 function somarProdutos () {
-    let produto = document.getElementById('produto')
-    let valor = document.getElementById('valor').value
-    let quantidade = document.getElementById('quantidade').value
-    let soma = valor*quantidade
+    let soma = Number(valor.value) * Number(quantidade.value)
     // tratativa de erros
-    if (valor <= 0 ) {
+    if (Number(valor.value) <= 0 ) {
         alert('digite um valor válido')
     }
-
-    if (quantidade <= 0 ){
+    
+    if (Number(quantidade.value) <= 0 ){
         alert('digite um valor válido')
     }
-
+    
     if(produto == '') {
         alert('digite uma quantidade válida')
     }
 
-    let bd = new Bd()
+    console.log(soma)
+    
+
 }
+
+// função para aplicar desconto
+function aplicarDesconto () {
+    
+}
+
