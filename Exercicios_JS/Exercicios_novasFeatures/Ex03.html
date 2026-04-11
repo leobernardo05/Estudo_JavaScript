@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo JS</title>
+    <script>
+        //  ------- exercicio 03 (Remover duplicados) - usar icludes( )-------
+        let array = []
+        let qtdPalavras = parseInt(prompt('Quantas palavras você quer digitar? '))
+
+        for(let i = 0; i < qtdPalavras; i++) {
+            let palavra = prompt('Digite uma palavra:')
+            // condicional que verifica os duplicados
+            if (!array.includes(palavra)) {
+                array.push(palavra)
+            }
+        }    
+        console.log(array)
+    </script>
+    <body></body>
+</html>
